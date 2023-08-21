@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
+
+:root {
+    --white: hsl(0, 0%, 100%);
+    --light-violet: hsl(270, 3%, 87%);
+    --dark-violet: hsl(279, 6%, 55%);
+    --very-dark-violet: hsl(278, 68%, 11%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(128, 128, 128, 0.189);
+}
+
+main {
+    display: flex;
+    position: relative;
+    width: 1440px;
+    height: 900px;
+    background-color: var(--white);
+}
+
+.card-front {
+    background-image: url("/images/bg-card-front.png");
+    position: absolute;
+    padding: 28px 20px 26.5px 32px;
+    top: 187px;
+    left: 164px;
+    width: 447px;
+    height: 245px;
+}
+
+.card-back {
+    background: url("images/bg-card-back.png");
+    position: absolute;
+    top: 469px;
+    left: 258px;
+    width: 447px;
+    height: 245px;
+}
+
+.cvc-number {
+    margin-top: 108px;
+    margin-left: 360px;
+    color: white;
+}
+
+.card-number {
+    font-size: 28px;
+    letter-spacing: 3.422px;
+    color: var(--white);
+    font-weight: 500;
+    margin-top: 60px;
+    margin-bottom: 25.5px;
+    letter-spacing: 3.422px;
+}
+
+.card-name {
+    color: var(--white);
+    display: inline;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: normal;
+    letter-spacing: 1px;
+    font-size: 15px;
+    text-transform: uppercase;
+}
+
+.card-month {
+    display: inline;
+    width: 50px;
+    font-size: 14px;
+    letter-spacing: 2px;
+    text-align: right;
+    color: white;
+    margin-left: 180px;
+}
+
+.card-year {
+    display: inline;
+    width: 50px;
+    font-size: 14px;
+    letter-spacing: 2px;
+    text-align: right;
+    color: white;
+}
+
+.date-dash {
+    color: var(--white);
+    font-size: 14px;
+    margin-left: -3px;
+}
+
+img {
+    object-fit: cover;
+}
+
+form {
+    margin-top: 275px;
+    margin-left: 349px;
+    height: 300px;
+    width: 385px;
+}
+
+label {
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    color: var(--very-dark-violet);
+}
+
+input {
+    height: 34px;
+    border-radius: 8px;
+    border: 1px solid var(--light-violet);
+    opacity: 0.75;
+    font-size: 16px;
+    padding-left: 12px;
+    margin-top: 5px;
+}
+
+#name {
+    margin-top: 9px;
+    width: 381px;
+    height: 41px;
+    margin-bottom: 26px;
+}
+
+#card-number {
+    margin-top: 9px;
+    margin-bottom: 26px;
+    width: 381px;
+    height: 41px;
+    margin-bottom: 26px;
+}
+
+
+#exp-datem {
+    width: 80px;
+    height: 45px;
+}
+
+
+#exp-datey {
+    width: 80px;
+    height: 45px;
+    margin-left: 10px;
+    margin-right: 13px;
+}
+
+#cvc {
+    width: 191px;
+    height: 45px;
+}
+
+#cvc-label {
+    margin-left: 36px;
+}
+
+#confirm-btn {
+    width: 384px;
+    background: var(--very-dark-violet);
+    opacity: 1;
+    color: white;
+    margin-top: 30px;
+    height: 50px;
+}
+
+#confirm-btn:hover {
+    cursor: pointer;
+}
+
+.card-number-error {
+    display: none;
+    color: var(--red, #FF5050);
+    font-feature-settings: 'clig' off, 'liga' off;
+    /* Body (S) */
+    font-family: Space Grotesk;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-top: -18px;
+    margin-bottom: 26px;
+}
+
+.expiry-error {
+    display: none;
+    color: #FF5050;
+    margin-top: 8px;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+}
+
+.cvc-error {
+    display: none;
+    position: absolute;
+    top: 572px;
+    left: 1024px;
+    color: #FF5050;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+}
+
+.error {
+    border: 1px solid #FF5050;
+}
